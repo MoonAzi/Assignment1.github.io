@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             li.setAttribute('latitude', g.Latitude);
             li.setAttribute('longitude', g.Longitude);
             li.setAttribute('id', g.GalleryID);
-            uList.appendChild(li);        
+            uList.appendChild(li);         
         });
          
         //adds event listeners on all list items so their attributes populate box a. 
@@ -588,6 +588,7 @@ document.addEventListener("DOMContentLoaded", function() {
         colors.forEach( c => { 
             let colorBox = document.createElement('div'); 
             colorBox.setAttribute('class', 'colorBox'); 
+            colorBox.setAttribute('title', `Color Name: ${c.name}\n Hex: ${c.web}`);
             colorBox.style.backgroundColor = c.web; 
             textBody.appendChild(colorBox); 
         });
